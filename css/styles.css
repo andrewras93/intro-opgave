@@ -1,0 +1,46 @@
+/* Global */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+
+header{
+    background-color: #fff387;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header #logo{
+    flex-basis: 50%;
+}
+
+#logo a{
+    color: #222;
+}
+
+header nav{
+    flex-basis: 50%;
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+}
