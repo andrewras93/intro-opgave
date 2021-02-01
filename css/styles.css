@@ -18,17 +18,27 @@ a{
     text-decoration: none;
 }
 
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
 /* Header */
 
 header{
-    background-color: #fff387;
+    background: #fff387;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+}
+
+#menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
 
-header #logo{
+#logo{
     flex-basis: 50%;
 }
 
@@ -36,11 +46,52 @@ header #logo{
     color: #222;
 }
 
-header nav{
+#menu nav{
     flex-basis: 50%;
 }
 
-header nav ul{
+#menu nav ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+/* Forside */
+
+/* Main */
+
+#forside-main{
+    background: url("../img/hero-image.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.overlay{
+    background-color: #00000099;
+    height: 100vh;
+}
+
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+}
+
+#hero h2{
+    font-size: 4rem;
+}
+
+#hero p{
+    max-width: 30%;
+    margin: 2rem auto;
+}
+
+#info-button{
+    background-color: #fff387;
+    color: #222;
+    padding: 8px;
 }
