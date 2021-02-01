@@ -8,6 +8,7 @@
 
 body{
     font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 li{
@@ -94,4 +95,49 @@ header{
     background-color: #fff387;
     color: #222;
     padding: 8px;
+}
+
+/* Info */
+
+/* Header */
+
+header.normal-position{
+    position: relative;
+}
+
+/* Main */
+
+#info-main{
+    margin: 4rem;
+}
+
+#info-main h1{
+    padding: 2rem;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.flex-container div{
+    padding: 2rem;
+    flex-basis: 50%;
+}
+
+.flex-container div h3{
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
+#info-main{
+    color: #222;
+}
+
+.parallax {
+    background-image: url("../img/parallax-image.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
