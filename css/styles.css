@@ -24,6 +24,10 @@ a{
     margin: auto;
 }
 
+.expanded{
+    display: flex !important;
+}
+
 /* Header */
 
 #hamburger{
@@ -255,6 +259,10 @@ input[type=submit]:hover{
 
     .parallax-2 h2{
         font-size: 2rem;
+    }
+
+    input[type=submit]{
+        padding: 12px;
     }
 
 }
