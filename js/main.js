@@ -20,8 +20,25 @@ function getFormData(){
     let email = document.querySelector('#email').value;
     let besked = document.querySelector('#besked').value;
 
-    alert('Hej ' + name + ' tak for din besked, hvor du skrev: ' + besked +
-    '. Vi vender tilbage til dig på din email ' + email + ' snarest muligt.');
+    if (name === ''){
+        document.querySelector('#nameSpan').classList.add('show');
+    }
+
+    if (email === ''){
+        document.querySelector('#emailSpan').classList.add('show');
+    }
+
+    if (besked === ''){
+        document.querySelector('#beskedSpan').classList.add('show');
+    }
+
+    else{
+        alert('Hej ' + name + ' tak for din besked, hvor du skrev: ' + besked +
+        '. Vi vender tilbage til dig på din email ' + email + ' snarest muligt.');
+
+        location.reload();
+        return false;
+    }
 
 }
 

@@ -28,6 +28,18 @@ a{
     display: flex !important;
 }
 
+.red{
+    color: red;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 /* Header */
 
 #hamburger{

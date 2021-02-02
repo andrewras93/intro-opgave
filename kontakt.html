@@ -44,16 +44,19 @@
 <main id="kontakt-main" class="container">
     <h1>Skriv til os</h1>
     <form>
-        <label for="name">Navn</label>
+        <label for="name">Navn<span class="red">*</span></label>
         <input type="text" id="name" name="name" placeholder="Indtast navn">
+        <span id="nameSpan" class="red hidden">Du skal udfylde navn<br></span>
 
-        <label for="email">Email</label>
+        <label for="email">Email<span class="red">*</span></label>
         <input type="email" id="email" name="email" placeholder="Indtast email">
+        <span id="emailSpan" class="red hidden">Du skal udfylde email<br></span>
 
-        <label for="besked">Besked</label>
+        <label for="besked">Besked<span class="red">*</span></label>
         <textarea id="besked" name="besked" placeholder="Skriv besked" style="height:200px"></textarea>
+        <span id="beskedSpan" class="red hidden">Du skal udfylde besked<br></span>
 
-        <input type="submit" value="Send" id="submitMsg">
+        <button type="button" id="submitMsg">Send</button>
     </form>
 </main>
 
