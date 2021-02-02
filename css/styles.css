@@ -133,8 +133,11 @@ header.normal-position{
     color: #222;
 }
 
-.parallax {
+.parallax{
     background-image: url("../img/parallax-image.jpg");
+}
+
+.parallax, .parallax-2{
     min-height: 500px;
     background-attachment: fixed;
     background-position: top;
@@ -146,6 +149,25 @@ header.normal-position{
 /* Kontakt */
 
 /* Main */
+
+.parallax-2{
+    background-image: url("../img/parallax-image-2.jpg");
+    background-position: center;
+}
+
+.parallax-2 h2{
+    color: #fff;
+    font-size: 3rem;
+}
+
+.parallax-overlay{
+    background-color: #00000099;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 input[type=text], input[type=email], select, textarea {
     width: 100%;
