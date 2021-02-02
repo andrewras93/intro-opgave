@@ -108,7 +108,7 @@ header.normal-position{
 /* Main */
 
 #info-main{
-    margin: 4rem;
+    margin: 4rem auto;
 }
 
 #info-main h1{
@@ -168,6 +168,13 @@ header.normal-position{
     align-items: center;
 }
 
+#kontakt-main{
+    margin: 4rem auto;
+}
+
+#kontakt-main h1{
+    margin-bottom: 2rem;
+}
 
 input[type=text], input[type=email], select, textarea {
     width: 100%;
@@ -181,7 +188,7 @@ input[type=text], input[type=email], select, textarea {
 input[type=submit] {
     background-color: #fff387;
     color: #222;
-    padding: 8px;
+    padding: 16px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
