@@ -202,7 +202,7 @@ input[type=text], input[type=email], select, textarea{
     margin-bottom: 16px;
 }
 
-input[type=submit]{
+#submitMsg{
     background-color: #fff387;
     color: #222;
     padding: 16px;
@@ -211,7 +211,7 @@ input[type=submit]{
     cursor: pointer;
 }
 
-input[type=submit]:hover{
+#submitMsg:hover{
     background-color: #222;
     color: #fff;
 }
@@ -261,7 +261,7 @@ input[type=submit]:hover{
         font-size: 2rem;
     }
 
-    input[type=submit]{
+    #submitMsg{
         padding: 12px;
     }
 
