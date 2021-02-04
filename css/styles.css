@@ -203,7 +203,7 @@ header.normal-position{
     margin-bottom: 2rem;
 }
 
-input[type=text], input[type=email], select, textarea{
+input[type=text], input[type=email], select, textarea, input[type=password]{
     width: 100%;
     padding: 12px;
     border: 1px solid #222;
@@ -212,7 +212,7 @@ input[type=text], input[type=email], select, textarea{
     margin-bottom: 16px;
 }
 
-#submitMsg{
+#submitMsg, #loginBtn{
     background-color: #fff387;
     color: #222;
     padding: 16px;
@@ -224,6 +224,17 @@ input[type=text], input[type=email], select, textarea{
 #submitMsg:hover{
     background-color: #222;
     color: #fff;
+}
+
+/* Login */
+
+.formContainer{
+    width: 50%;
+}
+
+#loginMain{
+    margin: 4rem auto;
+    padding: 2rem;
 }
 
 /* X-Small Screen */
@@ -273,6 +284,12 @@ input[type=text], input[type=email], select, textarea{
 
     #submitMsg{
         padding: 12px;
+    }
+
+    /* Login */
+
+    .formContainer{
+        width: 100%;
     }
 
 }
