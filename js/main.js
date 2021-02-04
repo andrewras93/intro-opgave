@@ -1,12 +1,31 @@
+// Create Menu
+
+const mainMenu = document.querySelectorAll('.mainMenu');
+
+function createMenuItem(){
+    const li = document.createElement('li');
+
+    li.innerHTML = '<a href=login.html>Login</a>';
+
+    //mainMenu[0].appendChild(li);
+    if(mainMenu && mainMenu.length > 0){
+        for(let i = 0; mainMenu.length > i; i++){
+            mainMenu[0].appendChild(li);
+        }
+    }
+}
+
+createMenuItem();
+
 // Toggle Mobile Menu
 
 function toggleClass(){
 
-    let menu = document.getElementsByClassName('mainMenu');
+    //let menu = document.getElementsByClassName('mainMenu');
 
-    if(menu && menu.length > 0){
-        for(let i = 0; menu.length > i; i++){
-            menu[0].classList.toggle('expanded');
+    if(mainMenu && mainMenu.length > 0){
+        for(let i = 0; mainMenu.length > i; i++){
+            mainMenu[0].classList.toggle('expanded');
         }
     }
 }
