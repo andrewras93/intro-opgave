@@ -35,14 +35,20 @@
     </div>
 </header>
 
+<div class="parallax-2">
+    <div class="parallax-overlay">
+        <h2>Login</h2>
+    </div>
+</div>
+
 <main id="loginMain" class="container">
     <h1>Login</h1>
-    <form class="formContainer">
-        <label for="username">Brugernavn</label>
+    <form class="formContainer" id="loginForm">
+        <label for="username">Brugernavn<span class="red">*</span></label>
         <input type="text" id="username" name="username" placeholder="Indtast brugernavn">
-        <label for="password">Adgangskode</label>
+        <label for="password">Adgangskode<span class="red">*</span></label>
         <input type="password" id="password" placeholder="Indtast adgangskode">
-        <button type="button" id="loginBtn">Login</button>
+        <button type="submit" id="loginBtn">Login</button>
     </form>
 </main>
 

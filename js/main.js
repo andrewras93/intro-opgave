@@ -36,37 +36,62 @@ hamburger.addEventListener('click', toggleClass);
 
 // Contact Form
 
-function getFormData(){
+const currentURL = window.location.href;
+console.log(currentURL);
+if(currentURL === 'http://localhost:63342/intro-opgave/kontakt.html'){
+    function getFormData(){
 
-    let name = document.getElementById('name');
-    let email = document.getElementById('email');
-    let besked = document.getElementById('besked');
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let besked = document.getElementById('besked');
 
-    document.getElementById('nameSpan').classList.remove('show');
-    document.getElementById('emailSpan').classList.remove('show');
-    document.getElementById('beskedSpan').classList.remove('show');
+        document.getElementById('nameSpan').classList.remove('show');
+        document.getElementById('emailSpan').classList.remove('show');
+        document.getElementById('beskedSpan').classList.remove('show');
 
-    if (!name.value){
-        document.getElementById('nameSpan').classList.add('show');
+        if (!name.value){
+            document.getElementById('nameSpan').classList.add('show');
+        }
+
+        if (!email.value){
+            document.getElementById('emailSpan').classList.add('show');
+        }
+
+        if (!besked.value){
+            document.getElementById('beskedSpan').classList.add('show');
+        }
+
+        else{
+            alert(`Hej ${name.value} tak for din besked, hvor du skrev: ${besked.value}. Vi vender tilbage til dig på din email ${email.value} snarest muligt`);
+
+            name.value = '';
+            email.value = '';
+            besked.value = '';
+        }
     }
 
-    if (!email.value){
-        document.getElementById('emailSpan').classList.add('show');
-    }
+    let submit = document.getElementById('submitMsg');
 
-    if (!besked.value){
-        document.getElementById('beskedSpan').classList.add('show');
-    }
-
-    else{
-        alert(`Hej ${name.value} tak for din besked, hvor du skrev: ${besked.value}. Vi vender tilbage til dig på din email ${email.value} snarest muligt`);
-
-        name.value = '';
-        email.value = '';
-        besked.value = '';
-    }
+    submit.addEventListener('click', getFormData);
 }
 
-let submit = document.getElementById('submitMsg');
+// Login
 
-submit.addEventListener('click', getFormData);
+if(currentURL === 'http://localhost:63342/intro-opgave/login.html'){
+
+    const loginForm = document.querySelector('#loginForm');
+    const username = document.querySelector('#username');
+    const password = document.querySelector('#password');
+
+    function onSubmit(e){
+        e.preventDefault();
+
+        if(!username.value || !password.value){
+            console.log('error');
+        } else{
+            window.location.replace("http://localhost:63342/intro-opgave/index.html");
+        }
+    }
+
+    loginForm.addEventListener('submit', onSubmit);
+}
