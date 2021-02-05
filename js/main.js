@@ -102,14 +102,18 @@ if(currentURL === 'http://localhost:63342/intro-opgave/login.html'){
     const loginForm = document.querySelector('#loginForm');
     const username = document.querySelector('#username');
     const password = document.querySelector('#password');
+    const loginMsg = document.querySelector('.loginMsg');
 
     function onSubmit(e){
         e.preventDefault();
 
         if(!username.value || !password.value){
-            console.log('error');
+
+            loginMsg.classList.add('error');
+            loginMsg.textContent = 'Udfyld venligst begge felter';
+
         } else{
-            window.location.replace("http://localhost:63342/intro-opgave/index.html");
+            window.location.replace("http://localhost:63342/intro-opgave/loggedin.html");
         }
     }
 

@@ -40,6 +40,15 @@ a{
     display: block;
 }
 
+.error{
+    background-color: red;
+    color: white;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
 /* Header */
 
 #hamburger{
