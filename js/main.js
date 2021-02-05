@@ -3,8 +3,7 @@
 const mainMenu = document.querySelectorAll('.mainMenu');
 
 function createMenuItem(){
-    //const li = document.createElement('li');
-    //const menuItems = ['Forside', 'Info', 'Kontakt', 'Login'];
+
     const menuItems = [
         {
             menuName: 'Forside',
@@ -24,29 +23,18 @@ function createMenuItem(){
         }
     ];
 
-    console.log(menuItems);
     menuItems.forEach((menuItem) => {
-        //console.log(menuItem);
+
         const li = document.createElement('li');
-        //console.log(li);
+
         li.innerHTML = `<a href="${menuItem.menuHref}">${menuItem.menuName}</a>`;
-        //console.log(li);
+
         if (mainMenu && mainMenu.length > 0){
             for(let i = 0; mainMenu.length > i; i++){
                 mainMenu[0].appendChild(li);
-                console.log(mainMenu[0]);
             }
         }
     });
-
-    //li.innerHTML = '<a href=login.html>Login</a>';
-
-    //mainMenu[0].appendChild(li);
-    /*if(mainMenu && mainMenu.length > 0){
-        for(let i = 0; mainMenu.length > i; i++){
-            mainMenu[0].appendChild(li);
-        }
-    }*/
 }
 
 createMenuItem();
@@ -54,8 +42,6 @@ createMenuItem();
 // Toggle Mobile Menu
 
 function toggleClass(){
-
-    //let menu = document.getElementsByClassName('mainMenu');
 
     if(mainMenu && mainMenu.length > 0){
         for(let i = 0; mainMenu.length > i; i++){
@@ -71,7 +57,7 @@ hamburger.addEventListener('click', toggleClass);
 // Contact Form
 
 const currentURL = window.location.href;
-console.log(currentURL);
+
 if(currentURL === 'http://localhost:63342/intro-opgave/kontakt.html'){
     function getFormData(){
 
