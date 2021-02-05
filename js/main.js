@@ -3,16 +3,50 @@
 const mainMenu = document.querySelectorAll('.mainMenu');
 
 function createMenuItem(){
-    const li = document.createElement('li');
+    //const li = document.createElement('li');
+    //const menuItems = ['Forside', 'Info', 'Kontakt', 'Login'];
+    const menuItems = [
+        {
+            menuName: 'Forside',
+            menuHref: 'index.html'
+        },
+        {
+            menuName: 'Info',
+            menuHref: 'info.html'
+        },
+        {
+            menuName: 'Kontakt',
+            menuHref: 'kontakt.html'
+        },
+        {
+            menuName: 'Login',
+            menuHref: 'login.html'
+        }
+    ];
 
-    li.innerHTML = '<a href=login.html>Login</a>';
+    console.log(menuItems);
+    menuItems.forEach((menuItem) => {
+        //console.log(menuItem);
+        const li = document.createElement('li');
+        //console.log(li);
+        li.innerHTML = `<a href="${menuItem.menuHref}">${menuItem.menuName}</a>`;
+        //console.log(li);
+        if (mainMenu && mainMenu.length > 0){
+            for(let i = 0; mainMenu.length > i; i++){
+                mainMenu[0].appendChild(li);
+                console.log(mainMenu[0]);
+            }
+        }
+    });
+
+    //li.innerHTML = '<a href=login.html>Login</a>';
 
     //mainMenu[0].appendChild(li);
-    if(mainMenu && mainMenu.length > 0){
+    /*if(mainMenu && mainMenu.length > 0){
         for(let i = 0; mainMenu.length > i; i++){
             mainMenu[0].appendChild(li);
         }
-    }
+    }*/
 }
 
 createMenuItem();
