@@ -56,66 +56,74 @@ hamburger.addEventListener('click', toggleClass);
 
 // Contact Form
 
-const currentURL = window.location.href;
+function getFormData(){
 
-if(currentURL === 'http://localhost:63342/intro-opgave/kontakt.html'){
-    function getFormData(){
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let besked = document.getElementById('besked');
+    let nameSpan = document.getElementById('nameSpan');
+    let emailSpan = document.getElementById('emailSpan');
+    let beskedSpan = document.getElementById('beskedSpan');
 
-        let name = document.getElementById('name');
-        let email = document.getElementById('email');
-        let besked = document.getElementById('besked');
+    nameSpan.classList.remove('show');
+    emailSpan.classList.remove('show');
+    beskedSpan.classList.remove('show');
 
-        document.getElementById('nameSpan').classList.remove('show');
-        document.getElementById('emailSpan').classList.remove('show');
-        document.getElementById('beskedSpan').classList.remove('show');
-
-        if (!name.value){
-            document.getElementById('nameSpan').classList.add('show');
-        }
-
-        if (!email.value){
-            document.getElementById('emailSpan').classList.add('show');
-        }
-
-        if (!besked.value){
-            document.getElementById('beskedSpan').classList.add('show');
-        }
-
-        else{
-            alert(`Hej ${name.value} tak for din besked, hvor du skrev: ${besked.value}. Vi vender tilbage til dig på din email ${email.value} snarest muligt`);
-
-            name.value = '';
-            email.value = '';
-            besked.value = '';
-        }
+    if (!name.value){
+        nameSpan.classList.add('show');
     }
 
-    let submit = document.getElementById('submitMsg');
+    if (!email.value){
+        emailSpan.classList.add('show');
+    }
 
+    if (!besked.value){
+        beskedSpan.classList.add('show');
+    }
+
+    else{
+        alert(`Hej ${name.value} tak for din besked, hvor du skrev: ${besked.value}. Vi vender tilbage til dig på din email ${email.value} snarest muligt`);
+
+        name.value = '';
+        email.value = '';
+        besked.value = '';
+    }
+}
+
+let submit = document.getElementById('submitMsg');
+
+if(submit){
     submit.addEventListener('click', getFormData);
+} else {
+    console.log('The id sumbitMsg doest not exist');
 }
 
 // Login
 
-if(currentURL === 'http://localhost:63342/intro-opgave/login.html'){
+const loginForm = document.querySelector('#loginForm');
+const username = document.querySelector('#username');
+const password = document.querySelector('#password');
+const loginMsg = document.querySelector('.loginMsg');
 
-    const loginForm = document.querySelector('#loginForm');
-    const username = document.querySelector('#username');
-    const password = document.querySelector('#password');
-    const loginMsg = document.querySelector('.loginMsg');
+function onSubmit(e){
+    e.preventDefault();
 
-    function onSubmit(e){
-        e.preventDefault();
+    if(!username.value || !password.value){
 
-        if(!username.value || !password.value){
+        loginMsg.classList.add('error');
+        loginMsg.textContent = 'Udfyld venligst begge felter';
 
-            loginMsg.classList.add('error');
-            loginMsg.textContent = 'Udfyld venligst begge felter';
-
-        } else{
-            window.location.replace("http://localhost:63342/intro-opgave/loggedin.html");
-        }
+    } else{
+        alert('Du er nu logget ind');
+        loginMsg.classList.remove('error');
+        loginMsg.textContent = '';
+        username.value = '';
+        password.value = '';
     }
+}
 
+if(loginForm){
     loginForm.addEventListener('submit', onSubmit);
+} else{
+    console.log('The id loginForm does not exist');
 }
